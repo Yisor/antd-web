@@ -12,9 +12,7 @@ const sagaMiddleware = createSagaMiddleware();
 middlewares.push(sagaMiddleware);
 middlewares.push(routerMiddleware);
 /* global __DEV__  */
-if (__DEV__) {
-  middlewares.push(logger);
-}
+middlewares.push(logger);
 const createStoreWithMiddleware = applyMiddleware(...middlewares)(createStore);
 
 export default function configureStore(initialState) {
