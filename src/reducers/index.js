@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
-import login  from '../containers/login';
+import { routerReducer } from 'react-router-redux'
+import { login } from '../containers/login';
 
 export default combineReducers({
-  login
+  login,
+  router: routerReducer
 });

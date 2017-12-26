@@ -1,16 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux'
-import { ConnectedRouter } from 'react-router-redux'
-import { BrowserRouter, Route } from 'react-router-dom'
-import store from './store/index';
-import App from './App';
-
+import { render } from 'react-dom'
 import registerServiceWorker from './registerServiceWorker';
+import configureStore from './store/index';
+import rootSaga from './sagas';
+import Root from './root';
 
-ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>
-  , document.getElementById('root'));
+let store = configureStore();
+store.runSaga(rootSaga);
+
+render(<Root store={store} />, document.getElementById('root'));
 registerServiceWorker();

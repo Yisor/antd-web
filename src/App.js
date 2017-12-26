@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-import { Link, withRouter, Route, BrowserRouter } from 'react-router-dom'
-
-import Home from './Home';
-import About from './About';
-import Repos from './Repos';
+import { Route, BrowserRouter } from 'react-router-dom'
+import Login from './containers/login/view/LoginPage';
+import About from './containers/About';
+import Repos from './containers/Repos';
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
         <div>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={Login} />
           <Route path="/about" component={About} />
           <Route path="/repos" component={Repos} />
         </div>
