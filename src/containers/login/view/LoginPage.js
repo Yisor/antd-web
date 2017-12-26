@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Button, WingBlank, Icon, List, Toast } from 'antd-mobile';
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux';
-import { push } from 'react-router-redux'
 import { login } from '../actions';
 import './login.css';
 

@@ -1,4 +1,4 @@
-import * as TYPES from './actionTypes';
+import * as TYPES from './types';
 
 const initialState = {
   user: {},
@@ -17,4 +17,8 @@ const login = (state = initialState, action) => {
       return state;
   }
 }
+
 export default login;
+
+
+

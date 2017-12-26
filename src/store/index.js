@@ -8,12 +8,11 @@ const middlewares = [];
 const { logger } = require('redux-logger');
 // configuring router middleware
 const history = createHistory()
-const middleware = routerMiddleware(history)
+const routMiddleware = routerMiddleware(history)
 // configuring saga middleware
 const sagaMiddleware = createSagaMiddleware();
-
 middlewares.push(sagaMiddleware);
-middlewares.push(middleware);
+middlewares.push(routMiddleware);
 middlewares.push(logger);
 
 const createStoreWithMiddleware = applyMiddleware(...middlewares)(createStore);
@@ -23,6 +22,5 @@ export default function configureStore(initialState) {
   // install saga run
   store.runSaga = sagaMiddleware.run;
   store.close = () => store.dispatch(END);
-
   return store;
 }
