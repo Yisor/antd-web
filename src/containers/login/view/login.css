@@ -1,10 +1,20 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction:column;
+flex: 1;
+  justify-content:center;
+  align-items:center;
+  background-color: #fff;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.App-login {
+  width: 295px;
+  height: 44px;
+	background-color: #8bc7fb;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #ffffff;
+  margin-top:20px;
 }
 
 .App-header {
@@ -22,8 +32,8 @@
   font-size: large;
 }
 
-.my-list{
-  flex-basis: initial;
+.my-form{
+  width:295px;
 }
 
 @keyframes App-logo-spin {
