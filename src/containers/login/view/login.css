@@ -1,20 +1,19 @@
 .App {
   display: flex;
-  flex-direction:column;
-flex: 1;
-  justify-content:center;
-  align-items:center;
-  background-color: #fff;
+  display: -webkit-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .App-login {
   width: 295px;
   height: 44px;
-	background-color: #8bc7fb;
+  background-color: #8bc7fb;
   border-radius: 5px;
   font-size: 16px;
   color: #ffffff;
-  margin-top:20px;
+  margin-top: 20px;
 }
 
 .App-header {
@@ -32,11 +31,15 @@ flex: 1;
   font-size: large;
 }
 
-.my-form{
-  width:295px;
+.my-form {
+  width: 295px;
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
