@@ -1,0 +1,49 @@
+.calendar-header {
+  display: flex;
+  background-color: #0af;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  color: #FFF;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.icon-right {
+  transform: translateZ(180deg);
+  /* IE 9 */
+  -ms-transform: translateZ(180deg);
+  /* Safari and Chrome */
+  -webkit-transform: translateZ(180deg);
+}
+
+.radius-bg {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.icon-calendar {
+  width: 15px;
+  height: 15px;
+}

@@ -7,6 +7,8 @@ import createHistory from 'history/createBrowserHistory'
 import Login from './containers/login/view/LoginPage';
 import About from './containers/About';
 import Repos from './containers/Repos';
+import CalendarPage from './containers/calendar/CalendarPage';
+import DateSwitcher from './containers/calendar/DateSwitcher';
 
 const history = createHistory();
 
@@ -14,7 +16,7 @@ const Root = ({ store }) => (
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <Switch>
-        <Route exact path="/" component={Login} />
+        <Route exact path="/" component={DateSwitcher} />
         <Route path="/about" component={About} />
         <Route path="/repos" component={Repos} />
       </Switch>

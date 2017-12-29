@@ -1,45 +1,45 @@
 .App {
-  display: flex;
-  display: -webkit-flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-login {
-  width: 295px;
-  height: 44px;
-  background-color: #8bc7fb;
-  border-radius: 5px;
-  font-size: 16px;
-  color: #ffffff;
-  margin-top: 20px;
+.Applogin {
+    width: 295px;
+    height: 44px;
+    background-color: #8bc7fb;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #ffffff;
+    margin-top: 20px;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
 }
 
 .App-title {
-  font-size: 1.5em;
+    font-size: 1.5em;
 }
 
 .App-intro {
-  font-size: large;
+    font-size: large;
 }
 
 .my-form {
-  width: 295px;
+    width: 295px;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
