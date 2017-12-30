@@ -79,3 +79,18 @@ export function dateFormat(date) {
 
   return `${year}年${monthStr}月${dayStr}日`
 }
+
+export function sameDay(a, b) {
+  return a instanceof Date && b instanceof Date &&
+    a.getFullYear() === b.getFullYear() &&
+    a.getMonth() === b.getMonth() &&
+    a.getDate() === b.getDate();
+}
+
+const weekDays = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
+
+export function getCalendarTxt(date) {
+  let today = dateFormat(date).slice(5, 11);
+  let weekday = date.getDay();
+  return `${today} ${weekDays[weekday]}`;
+}
