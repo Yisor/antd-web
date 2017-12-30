@@ -1,6 +1,7 @@
 import * as TYPES from './types';
 
 const initialState = {
+  auth: null,
   user: {},
   status: null,
 };
@@ -12,6 +13,12 @@ const login = (state = initialState, action) => {
         ...state,
         user: action.data,
         status: "Done"
+      };
+    case TYPES.LOGIN_DONING:
+      return {
+        ...state,
+        auth: action.data,
+        status: "Logining"
       };
     default:
       return state;

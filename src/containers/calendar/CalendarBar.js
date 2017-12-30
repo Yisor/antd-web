@@ -8,7 +8,7 @@ import './dateSwitcher.css'
 
 const weekDays = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
 
-class DateSwitcher extends Component {
+class CalendarBar extends Component {
 
   static propTypes = {
     onChange: PropTypes.func,
@@ -83,4 +83,4 @@ class DateSwitcher extends Component {
   }
 }
 
-export default DateSwitcher;
+export default CalendarBar;

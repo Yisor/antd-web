@@ -37,7 +37,7 @@ class LoginPage extends Component {
                     <InputItem placeholder="企业编号" defaultValue="2016" style={{ textAlign: 'center', width: '295px', height: 50, }} />
                     <InputItem placeholder="手机号" type="phone" style={{ textAlign: 'center', width: '295px', height: 50 }} />
                     <InputItem clear placeholder="密码" style={{ textAlign: 'center', width: '295px', height: 50 }} />
-                    <Button className={styles.Applogin}>登录</Button>
+                    <Button className='Applogin' onClick={this.onSubmit}>登录</Button>
 
                 </div>
             </div>

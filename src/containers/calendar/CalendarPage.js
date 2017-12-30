@@ -54,7 +54,7 @@ class CalendarPage extends React.Component {
             return [date, new Date(+now - 604800000)];
           },
         })}
-        
+
         {
           this.state.startTime &&
           <List.Item>Time1: {this.state.startTime.toLocaleString()}</List.Item>
