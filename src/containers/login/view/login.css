@@ -6,7 +6,7 @@
     align-items: center;
 }
 
-.Applogin {
+.login_button {
     width: 295px;
     height: 44px;
     background-color: #8bc7fb;
@@ -14,6 +14,26 @@
     font-size: 16px;
     color: #ffffff;
     margin-top: 20px;
+}
+
+.button_active {
+    width: 295px;
+    height: 44px;
+    background-color: #51a6f0;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+.verify_button {
+    width: 295px;
+    height: 44px;
+    background-color: #8bc7fb;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #ffffff;
+    margin-top: 45px;
 }
 
 .App-header {
@@ -25,14 +45,6 @@
 
 .App-title {
     font-size: 1.5em;
-}
-
-.App-intro {
-    font-size: large;
-}
-
-.my-form {
-    width: 295px;
 }
 
 @keyframes App-logo-spin {

@@ -8,6 +8,9 @@ import Login from './containers/login/view/LoginPage';
 import About from './containers/About';
 import Repos from './containers/Repos';
 import CalendarPage from './containers/calendar/CalendarPage';
+import VerifyPage from './containers/login/view/VerifyPage';
+import CaptchaPage from './containers/login/view/CaptchaPage';
+import NewPasswordPage from './containers/login/view/NewPasswordPage';
 
 const history = createHistory();
 
@@ -16,6 +19,9 @@ const Root = ({ store }) => (
     <ConnectedRouter history={history}>
       <Switch>
         <Route exact path="/" component={Login} />
+        <Route path="/verify" component={VerifyPage} />
+        <Route path="/captcha" component={CaptchaPage} />
+        <Route path="/password" component={NewPasswordPage} />
         <Route path="/about" component={About} />
         <Route path="/repos" component={Repos} />
       </Switch>
@@ -24,7 +30,7 @@ const Root = ({ store }) => (
 )
 
 Root.propTypes = {
-  store: PropTypes.object.isRequired
+  store: PropTypes.object
 }
 
 export default Root
