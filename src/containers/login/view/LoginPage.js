@@ -38,7 +38,7 @@ class LoginPage extends Component {
                     <InputItem placeholder="手机号" type="phone" style={{ textAlign: 'center', width: '295px', height: 50 }} />
                     <InputItem clear placeholder="密码" style={{ textAlign: 'center', width: '295px', height: 50 }} />
                     <Button className='Applogin' onClick={this.onSubmit}>登录</Button>
-
+                    <p style={{ fontSize: 14, color: "#a0a4a8" }}>忘记密码？</p>
                 </div>
             </div>
         );
