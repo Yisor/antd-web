@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'
-import { Button, Icon, List, NavBar, Toast,ListView  } from 'antd-mobile';
+import { Button, Icon, List, NavBar, Toast, ListView } from 'antd-mobile';
 import { connect } from 'react-redux';
 import styles from './address.css';
 
@@ -94,20 +94,7 @@ const list = [
   },
   {
     "addressId": 1044,
-    "receiveName": "陈磊333",
-    "receivePhone": "13616532010",
-    "receiveAddress": "测试地址",
-    "receiveProvince": "浙江省",
-    "receiveCity": "杭州市",
-    "receiveDistrict": "市辖区",
-    "updateTime": 1495785958000,
-    "expressType": null,
-    "expressDate": null,
-    "postcode": null,
-    "addressType": 2
-  },{
-    "addressId": 1044,
-    "receiveName": "陈磊222",
+    "receiveName": "陈磊",
     "receivePhone": "13616532010",
     "receiveAddress": "测试地址",
     "receiveProvince": "浙江省",
@@ -119,6 +106,34 @@ const list = [
     "postcode": null,
     "addressType": 2
   },
+  {
+    "addressId": 1044,
+    "receiveName": "陈磊",
+    "receivePhone": "13616532010",
+    "receiveAddress": "测试地址",
+    "receiveProvince": "浙江省",
+    "receiveCity": "杭州市",
+    "receiveDistrict": "市辖区",
+    "updateTime": 1495785958000,
+    "expressType": null,
+    "expressDate": null,
+    "postcode": null,
+    "addressType": 2
+  },
+  {
+    "addressId": 1044,
+    "receiveName": "陈磊",
+    "receivePhone": "13616532010",
+    "receiveAddress": "测试地址",
+    "receiveProvince": "浙江省",
+    "receiveCity": "杭州市",
+    "receiveDistrict": "市辖区",
+    "updateTime": 1495785958000,
+    "expressType": null,
+    "expressDate": null,
+    "postcode": null,
+    "addressType": 2
+  }
 ];
 
 class Address extends Component {
@@ -149,6 +164,26 @@ class Address extends Component {
 }
 
 class DeliveryAddressPage extends Component {
+  constructor(props) {
+    super(props);
+    const dataSource = new ListView.DataSource({
+      rowHasChanged: (row1, row2) => row1 !== row2,
+    });
+
+    this.state = {
+      dataSource,
+      isLoading: true,
+    };
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        dataSource: this.state.dataSource.cloneWithRows(list),
+        isLoading: false,
+      });
+    }, 600);
+  }
 
   onSubmit = () => {
     Toast.info('确定', 1);
@@ -159,6 +194,35 @@ class DeliveryAddressPage extends Component {
   }
 
   render() {
+   
+    return (
+      <div >
+        <div className={styles.content}>
+          <NavBar
+            mode="dark"
+            icon={<Icon type="left" />}
+            rightContent={
+              <div style={{ marginRight: '16px' }} onClick={this.onSubmit}>确定</div>
+            }
+          >配送地址</NavBar>
+          <ListView
+            ref={el => this.lv = el}
+            dataSource={this.state.dataSource}
+            renderRow={(item)=><Address item={item} onClick={(item) => { Toast.info(item.receiveName, 1) }} />}
+            className="am-list"
+            pageSize={4}
+            useBodyScroll
+            onScroll={() => { console.log('scroll'); }}
+            onEndReachedThreshold={10}
+          />
+
+          <Button className={styles.add_button} onClick={this.onAddAddress}>新增配送地址</Button>
+        </div>
+      </div>
+    );
+  }
+
+  render2() {
     return (
       <div className={styles.container}>
         <div className={styles.content}>

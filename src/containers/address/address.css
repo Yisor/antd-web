@@ -28,22 +28,3 @@
     font-size: 16px;
     color: #ffffff;
 }
-
-.button_active {
-    width: 295px;
-    height: 44px;
-    background-color: #51a6f0;
-    border-radius: 5px;
-    font-size: 16px;
-    color: #ffffff;
-    margin-top: 20px;
-}
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
