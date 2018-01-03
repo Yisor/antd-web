@@ -4,6 +4,7 @@ import registerServiceWorker from './registerServiceWorker';
 import configureStore from './store/index';
 import rootSaga from './sagas';
 import Root from './root';
+import './index.css';
 
 let store = configureStore();
 store.runSaga(rootSaga);

@@ -5,12 +5,6 @@ import { createForm } from 'rc-form';
 import { login } from '../actions';
 import styles from './login.css';
 
-const mockUser = {
-    "corpCode": '111',
-    "accountName": '222',
-    "accountPassword": '3333'
-}
-
 class LoginPage extends Component {
     state = {
         user: {
@@ -75,7 +69,7 @@ class LoginPage extends Component {
                         {...getFieldProps('password', {
                             rules: [{ type: 'string', required: true }],
                             onChange: value => this.onChange('accountPassword', value)
-                        })}
+                        }) }
                         clear
                         type="password"
                         placeholder="密码"

@@ -7,6 +7,7 @@ import createHistory from 'history/createBrowserHistory'
 import Login from './containers/login/view/LoginPage';
 import About from './containers/About';
 import Repos from './containers/Repos';
+import DeliveryAddress from './containers/address/DeliveryAddressPage';
 import CalendarPage from './containers/calendar/CalendarPage';
 import VerifyPage from './containers/login/view/VerifyPage';
 import CaptchaPage from './containers/login/view/CaptchaPage';
@@ -18,7 +19,8 @@ const Root = ({ store }) => (
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <Switch>
-        <Route exact path="/" component={Login} />
+        <Route exact path="/" component={DeliveryAddress} />
+        <Route path="/login" component={Login} />
         <Route path="/verify" component={VerifyPage} />
         <Route path="/captcha" component={CaptchaPage} />
         <Route path="/password" component={NewPasswordPage} />
@@ -30,7 +32,7 @@ const Root = ({ store }) => (
 )
 
 Root.propTypes = {
-  store: PropTypes.object
+  store: PropTypes.object.isRequired
 }
 
 export default Root
