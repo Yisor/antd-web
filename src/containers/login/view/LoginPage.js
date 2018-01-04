@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { createForm } from 'rc-form';
 import { login } from '../actions';
 import styles from './login.css';
-import _ from 'lodash/string';
+
 class LoginPage extends Component {
     state = {
         user: {
@@ -73,7 +73,7 @@ class LoginPage extends Component {
                         placeholder="密码"
                         style={{ textAlign: 'center', width: '295px', height: 50 }} />
 
-                    <Button className={btnSytle} activeClassName={styles.button_active} onClick={this.onSubmit}>登录</Button>
+                    <Button onClick={this.onSubmit}>登录</Button>
                     <p style={{ fontSize: 14, color: "#a0a4a8" }} onClick={this.onForgotPsw}>忘记密码？</p>
                 </div>
             </div>

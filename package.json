@@ -28,7 +28,7 @@
     "history": "^4.7.2",
     "html-webpack-plugin": "2.29.0",
     "jest": "20.0.4",
-    "lodash": "^4.17.4",
+    "less": "^2.7.3",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "2.0.8",
@@ -95,13 +95,17 @@
   "babel": {
     "presets": [
       "react-app"
-    ],
-    "plugins": [
-      "lodash"
     ]
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "theme": {
+    "brand-primary-tap": "red",
+    "brand-primary": "red",
+    "color-text-base": "green",
+    "border-color-base":"red",
+    "fill-base":"red"
   },
   "devDependencies": {
     "babel-plugin-import": "^1.6.3",
