@@ -1,29 +1,42 @@
-.App {
+.container {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-color: #fff;
+}
+
+.content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    display: -webkit-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
-    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
-.login_button {
-    width: 295px;
-    height: 44px;
-    background-color: #8bc7fb;
-    border-radius: 5px;
-    font-size: 16px;
-    color: #ffffff;
-    margin-top: 20px;
-}
-
-.button_active {
+.button {
     width: 295px;
     height: 44px;
     background-color: #51a6f0;
     border-radius: 5px;
     font-size: 16px;
     color: #ffffff;
-    margin-top: 20px;
+    margin: 20px auto 0;
+}
+
+.button_active {
+    width: 295px;
+    height: 44px;
+    background-color: #8bc7fb;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #ffffff;
+    margin: 20px auto 0;
 }
 
 .verify_button {
@@ -34,24 +47,4 @@
     font-size: 16px;
     color: #ffffff;
     margin-top: 45px;
-}
-
-.App-header {
-    background-color: #222;
-    height: 150px;
-    padding: 20px;
-    color: white;
-}
-
-.App-title {
-    font-size: 1.5em;
-}
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
 }

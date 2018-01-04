@@ -24,7 +24,7 @@ class CaptchaPage extends Component {
             短信验证码已发送
            <div />
           </div>
-          <p style={{ fontSize: 14, color: "#797f85" }}>{`短信验证码已发送至 +86${13023618512} 请注意查收`}</p>
+          <p style={{ fontSize: 14, color: "#797f85", marginLeft: 20, marginRight: 20 }}>{`短信验证码已发送至 +86${13023618512} 请注意查收`}</p>
           <InputItem type="number" maxLength={6} style={{ width: '295px', height: 58 }} />
           <Button className={styles.verify_button} onClick={this.onSubmit}>下一步</Button>
           <p style={{ fontSize: 16, color: "#51a6f0" }} onClick={this.onResend}>重新发送验证码</p>

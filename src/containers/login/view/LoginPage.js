@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { Button, Icon, List, InputItem, Toast, } from 'antd-mobile';
+import { Button, Icon, List, InputItem, Toast, TabBar } from 'antd-mobile';
 import { connect } from 'react-redux';
 import { createForm } from 'rc-form';
 import { login } from '../actions';
 import styles from './login.css';
-
+import _ from 'lodash/string';
 class LoginPage extends Component {
     state = {
         user: {
@@ -16,9 +16,8 @@ class LoginPage extends Component {
     }
 
     onChange = (field, value) => {
-        console.log('自定义' + value);
         const { user, user: { corpCode, accountName, accountPassword } } = this.state;
-        user[field] = value;
+        user[field] = value.replace(/\s+/g, "");
         const isActive = corpCode && accountName && accountPassword;
         this.setState({ user: user, isActive });
     }
@@ -42,10 +41,10 @@ class LoginPage extends Component {
 
     render() {
         const { getFieldProps } = this.props.form;
-        const btnSytle = this.state.isActive ? styles.button_active : styles.login_button;
+        const btnSytle = this.state.isActive ? styles.button_active : styles.button;
         return (
-            <div style={{ position: 'fixed', height: '100%', width: '100%', top: 0, backgroundColor: '#fff' }}>
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <div className={styles.container}>
+                <div className={styles.content}>
                     <div style={{ margin: 15, fontSize: 18, color: "#323b43", }}>登录飞巴商旅</div>
                     <InputItem
                         {...getFieldProps('corpCode', {
@@ -70,12 +69,11 @@ class LoginPage extends Component {
                             rules: [{ type: 'string', required: true }],
                             onChange: value => this.onChange('accountPassword', value)
                         }) }
-                        clear
                         type="password"
                         placeholder="密码"
                         style={{ textAlign: 'center', width: '295px', height: 50 }} />
 
-                    <Button className={btnSytle} onClick={this.onSubmit}>登录</Button>
+                    <Button className={btnSytle} activeClassName={styles.button_active} onClick={this.onSubmit}>登录</Button>
                     <p style={{ fontSize: 14, color: "#a0a4a8" }} onClick={this.onForgotPsw}>忘记密码？</p>
                 </div>
             </div>
@@ -88,8 +86,5 @@ const select = store => ({
     user: store.login.user,
 })
 
-// const onValuesChange = (props, changed, all) => {
-//     console.log(props);
-// }
 const Login = createForm()(LoginPage);
 export default connect(select)(Login);
