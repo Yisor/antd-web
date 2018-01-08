@@ -12,6 +12,8 @@ import CalendarPage from './containers/calendar/CalendarPage';
 import VerifyPage from './containers/login/view/VerifyPage';
 import CaptchaPage from './containers/login/view/CaptchaPage';
 import NewPasswordPage from './containers/login/view/NewPasswordPage';
+import FlightOrderItem from './containers/order/FlightOrderItem';
+import FlightOrder from './containers/order/FlightOrder';
 
 const history = createHistory();
 
@@ -19,7 +21,7 @@ const Root = ({ store }) => (
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <Switch>
-        <Route exact path="/" component={Login} />
+        <Route exact path="/" component={FlightOrder} />
         <Route path="/login" component={Login} />
         <Route path="/verify" component={VerifyPage} />
         <Route path="/captcha" component={CaptchaPage} />
