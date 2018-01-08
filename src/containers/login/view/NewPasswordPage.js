@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Icon, List, InputItem, Toast } from 'antd-mobile';
+import { Button, Icon, InputItem, Toast } from 'antd-mobile';
 import { connect } from 'react-redux';
 import styles from './login.css';
 

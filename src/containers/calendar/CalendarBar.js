@@ -36,7 +36,7 @@ class CalendarBar extends Component {
 
   onRightClick = () => {
     let now = this.state.activeDate;
-    let { onChange, maxDate } = this.props;
+    let { maxDate } = this.props;
     if (!maxDate) {
       now.setDate(now.getDate() + 1);
       this.updateDate(now);
@@ -47,7 +47,7 @@ class CalendarBar extends Component {
   }
 
   onLeftClick = () => {
-    let { onChange, minDate } = this.props;
+    let { minDate } = this.props;
     let nextDate = this.state.activeDate;
     if (!sameDay(nextDate, minDate) && nextDate > minDate) {
       nextDate.setDate(nextDate.getDate() - 1);
@@ -71,7 +71,7 @@ class CalendarBar extends Component {
         <div className="radius-bg" onClick={this.onMiddleClick}>
           <div style={{ fontSize: 12, color: '#000' }}>{getCalendarTxt(this.state.activeDate)}</div>
           <div style={{ height: 15, width: 1, backgroundColor: '#000', marginLeft: 10, marginRight: 10 }} />
-          <img className="icon-calendar" src={calendar} />
+          <img className="icon-calendar" src={calendar} alt='' />
         </div>
 
         <div className="header-right" onClick={this.onRightClick}>

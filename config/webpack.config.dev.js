@@ -216,9 +216,6 @@ module.exports = {
               require.resolve('css-loader'),
               {
                 loader: require.resolve('less-loader'),
-                options: {
-                  modifyVars: theme
-                }
               },
             ],
             // include: /node_modules/,

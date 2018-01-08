@@ -121,7 +121,6 @@ const list = [
     "postcode": null,
     "addressType": 2
   },
-
 ];
 
 class Address extends Component {

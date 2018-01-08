@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import { Route, Switch } from 'react-router-dom'
 import { ConnectedRouter } from 'react-router-redux'
 import createHistory from 'history/createBrowserHistory'
+import DevTools from './containers/DevTools'
 import Login from './containers/login/view/LoginPage';
 import About from './containers/About';
 import Repos from './containers/Repos';
@@ -28,7 +29,9 @@ const Root = ({ store }) => (
         <Route path="/password" component={NewPasswordPage} />
         <Route path="/about" component={About} />
         <Route path="/repos" component={Repos} />
+        <DevTools />
       </Switch>
+    
     </ConnectedRouter>
   </Provider>
 )
