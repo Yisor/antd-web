@@ -42,8 +42,8 @@ class FlightOrder extends Component {
     console.log('onChange', index, tab);
   }
 
-  onItemPress = () => {
-    Toast.info('点击了', 1);
+  onItemPress = (item) => {
+    Toast.info('点击了' + item.orderId, 1);
   }
 
   renderRow = (item) => {
